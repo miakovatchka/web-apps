@@ -1,0 +1,19 @@
+<h1>Tacos!!!</h1>
+
+<p>I love tacos</p>
+
+<% fillings = ["Carnitas", "Al Pastor", "Pescado", "Mushroom", "Other"] %>
+
+
+<!-- Comment -->
+
+<p>We have <%= fillings.count %> tacos</p>
+
+<ul>
+<% for filling in fillings %>
+  <li><%= filling %></li>
+<% end %>
+</ul>
+
+<!-- Interlacing ruby code with html code above -->
+

@@ -1,0 +1,21 @@
+<h1>Dice</h1>
+
+<% first_dice = rand(1..6) %>
+<% second_dice = rand(1..6) %>
+
+<p>
+<%= first_dice %>
+<%= second_dice %>
+</p>
+
+<p>The total is <%= first_dice + second_dice %></p>
+
+<p>
+<img src="/images/dice/<%= first_dice %>.svg">
+<img src="/images/dice/<%= second_dice %>.svg">
+<a href="/dice">Roll again</a>
+<a href="/tacos">Tacos</a>
+
+</p>
+
+<!-- Domain remains unchanged, so can use /dice vs. whole URL -->
