@@ -1,0 +1,29 @@
+<h1>Cards Game</h1>
+
+<%
+ranks = ["Ace", "King", "Queen", "Jack", 2, 3, 4, 5, 6, 7, 8, 9] 
+suits = ["Clubs", "Spades", "Diamonds", "Hearts"]
+
+deck = []
+for rank in ranks
+  for suit in suits
+  deck << "#{rank} of #{suit}"
+  end
+end
+
+shuffled_deck = deck.shuffle
+hand = shuffled_deck[0,5]
+%>
+
+<h1>Welcome to the ENTR-451 Casino</h1>
+<p>
+<% for card in hand %>
+<%= card %>
+ <img src="/images/cards/<%= hand %>.svg%">
+<% end %>
+</p>
+
+<p>
+ <a href= "/cards">Deal again!</a>
+</p>
+
